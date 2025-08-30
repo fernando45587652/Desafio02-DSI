@@ -4,7 +4,7 @@ import MapView, { Marker } from 'react-native-maps';
 import { fetchWeatherByCity } from '../util/Api';
 import { Dimensions } from 'react-native';
 
-export default function CountryDetailScreen({ route }) {
+export default function CountrieDetail({ route }) {
   const { countryName, capital, latlng, flag } = route.params ?? {};
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -144,3 +144,4 @@ const styles = StyleSheet.create({
   metrics: { flexDirection: 'row', gap: 16, marginTop: 8 },
   metric: { fontSize: 14, color: '00FA9A' },
 });
+
